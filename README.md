@@ -56,6 +56,13 @@ Run the seeder
 ```ruby
 rake db:seed
 ```
+those will generate data:
+```
+- username: user1, password: pwduser1
+- username: user2, password: pwduser2
+- username: user3, password: pwduser3
+- username: user4, password: pwduser4
+```
 
 ##### 4. Start the Rails server
 
