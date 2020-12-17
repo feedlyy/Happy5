@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2020_12_17_172652) do
   end
 
   create_table "messages", force: :cascade do |t|
+    t.text "message"
     t.integer "user_id"
     t.integer "conversation_id"
     t.datetime "sent"
