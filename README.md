@@ -1,24 +1,68 @@
-# README
+# HOW TO INSTALL
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##### Prerequisites
 
-Things you may want to cover:
+The setups steps expect following tools installed on the system.
 
-* Ruby version
+- Ruby [2.7.0p0]
+- Rails [6.1.0]
 
-* System dependencies
+[comment]: <> (#### Database design)
 
-* Configuration
+[comment]: <> (![Database]&#40;https://user-images.githubusercontent.com/33906363/85913738-84f1d080-b861-11ea-8e50-8fca856a01ab.png&#41;)
 
-* Database creation
+##### 1. Clone the repository
 
-* Database initialization
+```bash
+git clone https://github.com/feedlyy/Happy5.git
+```
 
-* How to run the test suite
+##### 2. Install all dependencies
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+1. run yarn install
+2. run bundle install
+```
 
-* Deployment instructions
+##### 3. Database setup 
+Database for this project are PostgreSQL
 
-* ...
+Create the database, this will create database with name happy5
+```ruby
+rake db:create
+# rake db:setup
+```
+
+Or edit this from database.yml according to your setup
+
+```bash
+default: 
+port: 5432 (your db port)
+username: postgres (your username for postgre)
+password: postgres (your password for postgre)
+
+development:
+  <<: *default
+  database: happy5 (your database name)
+```
+
+Migrate the migrations
+
+```ruby
+rake db:migrate
+```
+
+Run the seeder
+```ruby
+rake db:seed
+```
+
+##### 4. Start the Rails server
+
+You can start the rails server using the command given below.
+
+```ruby
+bundle exec rails s
+```
+
+And now you can visit the site with the URL http://localhost:3000
