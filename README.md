@@ -94,7 +94,7 @@ Every post method requires param, and there will be validation
 if the param is missing. hint: 
 ```bash
 Make sure you access '/read' for see the incoming message before
-you reply the other message ('/reply').
+you reply the other message ('/reply') otherwise you will be get error.
 ```
 
 ##### 3. Pagination
