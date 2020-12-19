@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   # GET /users
   def index
     @pagy, @records = pagy(User.all, page: params[:page], items: 3)
-    render json: {data: @records}
+    render json: { data: @records, pagination:@pagy }, status: :ok
   end
 
   # GET /users/1
