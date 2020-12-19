@@ -55,7 +55,7 @@ Run the seeder
 ```ruby
 rake db:seed
 ```
-those will generate data:
+Those will generate data:
 ```
 - username: user1, password: pwduser1
 - username: user2, password: pwduser2
@@ -72,3 +72,32 @@ bundle exec rails s or rails s
 ```
 
 And now you can visit the site with the URL http://localhost:3000
+
+# EXTRA
+
+##### 1. Authentication
+This project use jwt authentication, 
+so please login first to '/auth/login'.
+After you loggin using username and password, 
+you will get a token for you use in your header as Authorization.
+List that protected are:
+```bash
+1. resource :user
+2. post '/send' -> send chat to user
+3. post '/reply' -> reply chat
+4. get '/read' -> read incoming chat
+5. get '/list' -> list all chat
+```
+
+##### 2. Validation
+Every post method requires param, and there will be validation
+if the param is missing. hint: 
+```bash
+Make sure you access '/read' for see the incoming message before
+you reply the other message ('/reply').
+```
+
+##### 3. Pagination
+This project also have pagination on get method, limited
+by 3 each data, so please
+include param "page" for see the other results.
