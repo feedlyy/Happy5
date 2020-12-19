@@ -30,7 +30,6 @@ Database for this project are PostgreSQL
 Create the database, this will create database with name happy5
 ```ruby
 rake db:create
-# rake db:setup
 ```
 
 Or edit this from database.yml according to your setup
@@ -69,7 +68,7 @@ those will generate data:
 You can start the rails server using the command given below.
 
 ```ruby
-bundle exec rails s
+bundle exec rails s or rails s
 ```
 
 And now you can visit the site with the URL http://localhost:3000
