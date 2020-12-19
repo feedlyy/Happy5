@@ -3,7 +3,7 @@ class ApplicationController < ActionController::API
   attr_reader :current_user
 
   def not_found
-    render json: { error: 'not_found' }
+    render json: { error: 'not_found' }, status: :not_found
   end
 
   def authorize_request
