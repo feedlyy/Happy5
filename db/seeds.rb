@@ -14,20 +14,20 @@ users = User
 users.destroy_all
 
 users.create!([{
-                 username: "user1",
-                 password: BCrypt::Password.create("pwduser1"),
+                 username: 'user1',
+                 password: 'pwduser1',
                },
                {
-                 username: "user2",
-                 password: BCrypt::Password.create("pwduser2"),
+                 username: 'user2',
+                 password: 'pwduser2',
                },
                {
-                 username: "user3",
-                 password: BCrypt::Password.create("pwduser3"),
+                 username: 'user3',
+                 password: 'pwduser3',
                },
                {
-                 username: "user4",
-                 password: BCrypt::Password.create("pwduser4"),
+                 username: 'user4',
+                 password: 'pwduser4s',
                }])
 
 p "Created #{users.count} users"
